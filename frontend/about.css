@@ -1,0 +1,340 @@
+/* About page specific styles */
+.about-hero {
+    background-color: var(--primary);
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about-mission {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.mission-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.mission-text {
+    flex: 1;
+}
+
+.mission-text h2 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.mission-text p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.mission-image {
+    flex: 1;
+    text-align: center;
+}
+
+.mission-image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+}
+
+/* How it works section */
+.how-it-works {
+    padding: 4rem 0;
+    background-color: var(--light);
+    text-align: center;
+}
+
+.how-it-works h2 {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: var(--dark);
+}
+
+.steps-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.step-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    max-width: 300px;
+    position: relative;
+    transition: var(--transition);
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.step-number {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.step-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.step-card h3 {
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+/* Platforms section */
+.platforms-section {
+    padding: 4rem 0;
+    background-color: white;
+    text-align: center;
+}
+
+.platforms-section h2 {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: var(--dark);
+}
+
+.platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.platform-card {
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.platform-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.platform-logo {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.platform-logo.amazon {
+    color: var(--amazon);
+}
+
+.platform-logo.jiomart {
+    color: var(--jiomart);
+}
+
+.platform-logo.myntra {
+    color: var(--myntra);
+}
+
+.platform-logo.ajio {
+    color: var(--ajio);
+}
+
+.platform-card h3 {
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+/* Team section */
+.team-section {
+    padding: 4rem 0;
+    background-color: var(--light);
+    text-align: center;
+}
+
+.team-section h2 {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: var(--dark);
+}
+
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background-color: rgb(255, 255, 255);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    max-width: 300px;
+    transition: var(--transition);
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.member-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1.5rem;
+    border: 3px solid var(--primary);
+    
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.team-member h3 {
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.member-title {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.member-bio {
+    color: var(--secondary);
+}
+
+/* FAQ section */
+.faq-section {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.faq-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: var(--dark);
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 1.5rem;
+    border: 1px solid #eee;
+    border-radius: var(--border-radius);
+}
+
+.faq-question {
+    padding: 1.5rem;
+    background-color: var(--light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+}
+
+.faq-question h3 {
+    margin: 0;
+    color: var(--dark);
+    font-size: 1.1rem;
+}
+
+.faq-toggle {
+    color: var(--primary);
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 1.5rem;
+    max-height: 1000px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .mission-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .step-card, .platform-card, .team-member {
+        width: 100%;
+    }
+    
+    .about-hero {
+        padding: 3rem 0;
+    }
+    
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .faq-question h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-hero p {
+        font-size: 1rem;
+    }
+    
+    .mission-text h2, .how-it-works h2, .platforms-section h2, .team-section h2, .faq-section h2 {
+        font-size: 1.7rem;
+    }
+    
+    .step-card, .platform-card, .team-member {
+        padding: 1.5rem;
+    }
+}

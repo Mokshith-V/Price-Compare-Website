@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PriceCompare - Compare Prices Across Platforms</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-tags"></i>
+                <span>PriceCompare</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <h1>Compare Prices Across Major E-commerce Platforms</h1>
+                <p>Find the best deals on Amazon, Flipkart, Myntra, and Ajio</p>
+                <div class="search-box">
+                    <input type="text" class="search-input" id="searchInput" placeholder="Enter product name (e.g., Nike Running Shoes Black)">
+                    <button class="search-button" id="searchButton">
+                        <i class="fas fa-search"></i>
+                        <span>Search</span>
+                    </button>
+                </div>
+                <div class="search-filters">
+                    <label>
+                        <input type="checkbox" id="amazonFilter" checked> 
+                        <span>Amazon</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="jiomartFilter" checked> 
+                        <span>JioMart</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="myntraFilter" checked> 
+                        <span>Myntra</span>
+                    </label>
+                    <label>
+                        <input type="checkbox" id="ajioFilter" checked> 
+                        <span>Ajio</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+    </div>
+    
+    <div class="platform-loading" id="platformLoading">
+        <div class="platform-status amazon">Amazon <span class="status">Searching...</span></div>
+        <div class="platform-status jiomart">JioMart <span class="status">Searching...</span></div>
+        <div class="platform-status myntra">Myntra <span class="status">Searching...</span></div>
+        <div class="platform-status ajio">Ajio <span class="status">Searching...</span></div>
+    </div>
+    
+    <section class="results-section" id="resultsSection">
+        <div class="container">
+            <div class="results-header">
+                <h2>Results for: <span id="searchQuery"></span></h2>
+                <div class="results-actions">
+                    <p>Compare prices across platforms to find the best deal</p>
+                    <button id="newSearchButton" class="new-search-button">
+                        <i class="fas fa-redo"></i> New Search
+                    </button>
+                </div>
+                <div class="sort-controls">
+                    <label for="sortSelect">Sort by:</label>
+                    <select id="sortSelect">
+                        <option value="relevance">Relevance</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                </div>
+            </div>
+            
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>Platform</th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Rating</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="resultsTableBody">
+                    <!-- Results will be populated here by JavaScript -->
+                </tbody>
+            </table>
+            
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search fa-3x"></i>
+                <h3>No products found</h3>
+                <p>Try different keywords or check your filters</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="features-section">
+        <div class="container">
+            <h2>Why Use PriceCompare?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-bolt fa-2x"></i>
+                    <h3>Fast Comparison</h3>
+                    <p>Get real-time prices from multiple platforms in seconds</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-money-bill-wave fa-2x"></i>
+                    <h3>Save Money</h3>
+                    <p>Find the best deals and discounts across all major stores</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-star fa-2x"></i>
+                    <h3>User Reviews</h3>
+                    <p>Compare ratings to make informed purchasing decisions</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt fa-2x"></i>
+                    <h3>No Bias</h3>
+                    <p>Independent results with no preference for any platform</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About PriceCompare</h3>
+                    <p>PriceCompare helps you find the best deals across major e-commerce platforms. Compare prices, read reviews, and make informed purchasing decisions.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Supported Platforms</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.amazon.in" target="_blank">Amazon</a></li>
+                        <li><a href="https://www.jiomart.com" target="_blank">JioMart</a></li>
+                        <li><a href="https://www.myntra.com" target="_blank">Myntra</a></li>
+                        <li><a href="https://www.ajio.com" target="_blank">Ajio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Subscribe to Updates</h3>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Your email">
+                        <button type="submit">Subscribe</button>
+                    </div>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 PriceCompare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/app.js"></script>
+</body>
+</html>
